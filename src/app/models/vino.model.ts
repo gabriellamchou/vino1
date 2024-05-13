@@ -9,8 +9,9 @@ export class Vino {
     public alergenos: string;
     public graduacion: number;
     public breveDescripcion: string;
+    public imagePath: string;
     public capacidad: number;
-    public stock: number;
+    public stock: number | null;
 
     constructor (
         id: number,
@@ -23,8 +24,9 @@ export class Vino {
         alerg: string,
         grad: number,
         desc: string,
+        img: string,
         cap: number,
-        stock: number
+        stock: number | null
     ) {
         this.id = id;
         this.nombre = nombre;
@@ -36,6 +38,7 @@ export class Vino {
         this.alergenos = alerg;
         this.graduacion = grad;
         this.breveDescripcion = desc;
+        this.imagePath = img;
         this.capacidad = cap;
         this.stock = stock;
     }

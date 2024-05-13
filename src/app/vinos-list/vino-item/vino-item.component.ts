@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vino-item.component.css']
 })
 export class VinoItemComponent implements OnInit {
-  vinos = [];
 
   constructor() { }
 
