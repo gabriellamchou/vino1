@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { Uva } from '../../models/uva.model';
 
 @Component({
-  selector: 'app-uva-detail',
-  templateUrl: './uva-detail.component.html',
-  styleUrls: ['./uva-detail.component.css']
+  selector: 'app-uva-list',
+  templateUrl: './uva-list.component.html',
+  styleUrls: ['./uva-list.component.css']
 })
-export class UvaDetailComponent implements OnInit {
+export class UvaListComponent implements OnInit {
   listaUvas: Uva[] = [
     new Uva(
       1,
@@ -54,6 +54,10 @@ export class UvaDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onNuevaUva(uva: Uva) {
+    this.listaUvas.push(uva);
   }
 
 }

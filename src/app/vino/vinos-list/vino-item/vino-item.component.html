@@ -1,1 +1,17 @@
-<p>vino-item works!</p>
+<div 
+    class="vino-item"
+    (click)="onVinoClicked()">
+    <a 
+        class="list-group-item clearfix">
+        <span class="pull-left">
+            <img 
+                [src]="vinoItem.imagePath" 
+                [alt]="vinoItem.nombre" 
+                class="img-responsive">
+        </span>
+        <div class="vino-item-text">
+            <h4 class="list-group-item-heading">{{ vinoItem.nombre }}</h4>
+            <p class="list-group-item-text">{{ vinoItem.breveDescripcion }}</p>
+        </div>
+    </a>
+</div>

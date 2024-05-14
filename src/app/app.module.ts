@@ -6,7 +6,7 @@ import { VinosListComponent } from './vino/vinos-list/vinos-list.component';
 import { VinoItemComponent } from './vino/vinos-list/vino-item/vino-item.component';
 import { HeaderComponent } from './header/header.component';
 import { VinoDetailComponent } from './vino/vino-detail/vino-detail.component';
-import { UvaDetailComponent } from './uva/uva-detail/uva-detail.component';
+import { UvaListComponent } from './uva/uva-list/uva-list.component';
 import { UvaEditComponent } from './uva/uva-edit/uva-edit.component';
 import { VinoComponent } from './vino/vino.component';
 import { UvaComponent } from './uva/uva.component';
@@ -18,7 +18,7 @@ import { UvaComponent } from './uva/uva.component';
     VinoItemComponent,
     HeaderComponent,
     VinoDetailComponent,
-    UvaDetailComponent,
+    UvaListComponent,
     UvaEditComponent,
     VinoComponent,
     UvaComponent

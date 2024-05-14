@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 import { Vino } from '../../models/vino.model';
 
@@ -8,6 +8,8 @@ import { Vino } from '../../models/vino.model';
   styleUrls: ['./vinos-list.component.css']
 })
 export class VinosListComponent implements OnInit {
+  @Output() vinoSelected = new EventEmitter<Vino>();
+
   listaVinos: Vino[] = [
     new Vino(
       1,
@@ -44,6 +46,10 @@ export class VinosListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onVinoSelected(vino: Vino) {
+    this.vinoSelected.emit(vino);
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Uva } from '../models/uva.model';
 
 @Component({
   selector: 'app-uva',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./uva.component.css']
 })
 export class UvaComponent implements OnInit {
+  uvaNueva!: Uva;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onAddedUva(uva: Uva) {
+    this.uvaNueva = uva;
   }
 
 }

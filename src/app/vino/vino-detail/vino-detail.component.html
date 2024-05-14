@@ -1,12 +1,15 @@
 <div class="container">
-    <div class="row">
+    <div class="row" class="imgDiv">
         <div class="col-xs-12">
-            <img src="" alt="" class="img-responsive">
+            <img 
+                [src]="vinoDetail.imagePath" 
+                [alt]="vinoDetail.nombre" 
+                class="img-responsive">
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <h3>Nombre del vino</h3>
+            <h3>{{ vinoDetail.nombre }}</h3>
         </div>
     </div>
     <div class="row">
@@ -17,7 +20,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <p>Descripción del vino</p>
+            <p>{{ vinoDetail.breveDescripcion }}</p>
         </div>
     </div>
     <div class="row">

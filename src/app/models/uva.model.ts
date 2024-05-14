@@ -1,6 +1,6 @@
 export class Uva{
     constructor(
-        public id: number,
+        public id: number | null,
         public nombre: string,
         public descripcion: string,
         public acidez: number | null,

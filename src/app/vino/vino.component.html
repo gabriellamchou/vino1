@@ -1,2 +1,6 @@
-<app-vinos-list></app-vinos-list>
-<app-vino-detail></app-vino-detail>
+<app-vinos-list
+    (vinoSelected)="onVinoSelected($event)">
+</app-vinos-list>
+<app-vino-detail
+    [vinoDetail]="vinoSelected">
+</app-vino-detail>
