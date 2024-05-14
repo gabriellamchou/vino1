@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { VinoDetailComponent } from './vino/vino-detail/vino-detail.component';
 import { UvaDetailComponent } from './uva/uva-detail/uva-detail.component';
 import { UvaEditComponent } from './uva/uva-edit/uva-edit.component';
+import { VinoComponent } from './vino/vino.component';
+import { UvaComponent } from './uva/uva.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { UvaEditComponent } from './uva/uva-edit/uva-edit.component';
     HeaderComponent,
     VinoDetailComponent,
     UvaDetailComponent,
-    UvaEditComponent
+    UvaEditComponent,
+    VinoComponent,
+    UvaComponent
   ],
   imports: [
     BrowserModule
