@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Uva } from '../models/uva.model';
+import { Uva } from '../../models/uva.model';
 
 @Component({
   selector: 'app-uva-detail',

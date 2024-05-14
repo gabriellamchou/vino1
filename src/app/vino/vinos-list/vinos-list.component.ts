@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Vino } from '../models/vino.model';
+import { Vino } from '../../models/vino.model';
 
 @Component({
   selector: 'app-vinos-list',
