@@ -1,5 +1,6 @@
-import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Uva } from 'src/app/models/uva.model';
+import { UvaService } from 'src/app/services/uva.service';
 
 @Component({
   selector: 'app-uva-edit',
@@ -7,12 +8,12 @@ import { Uva } from 'src/app/models/uva.model';
   styleUrls: ['./uva-edit.component.css']
 })
 export class UvaEditComponent implements OnInit {
-  @Output() nuevaUva = new EventEmitter<Uva>();
-
   @ViewChild('nombreInput') nombreInputRef!: ElementRef;
   @ViewChild('descInput') descInputRef!: ElementRef;
 
-  constructor() { }
+  constructor(
+    private uvaService: UvaService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -30,6 +31,6 @@ export class UvaEditComponent implements OnInit {
       null,
       null
     )
-    this.nuevaUva.emit(newUva);
+    this.uvaService.addUva(newUva);
   }
 }

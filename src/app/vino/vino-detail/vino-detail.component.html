@@ -25,7 +25,12 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <p>Uvas</p>
+            <ul class="list-group">
+                <li class="list-group-item"
+                    *ngFor="let uva of vinoDetail.listaUvas">
+                    {{ uva.nombre }} ({{ uva.descripcion }})
+                </li>
+            </ul>
         </div>
     </div>
 </div>

@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Vino } from 'src/app/models/vino.model';
+import { VinoService } from 'src/app/services/vino.service';
 
 @Component({
   selector: 'app-vino-item',
@@ -9,15 +10,15 @@ import { Vino } from 'src/app/models/vino.model';
 export class VinoItemComponent implements OnInit {
   @Input() vinoItem!: Vino;
 
-  @Output() vinoSelected = new EventEmitter<void>();
-
-  constructor() { }
+  constructor(
+    private vinoService: VinoService
+  ) { }
 
   ngOnInit(): void {
   }
 
   onVinoClicked() {
-    this.vinoSelected.emit();
+    this.vinoService.vinoSelected.emit(this.vinoItem);
   }
 
 }

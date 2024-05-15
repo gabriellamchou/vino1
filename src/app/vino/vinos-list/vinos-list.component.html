@@ -10,7 +10,6 @@
     <div class="col-lg-12">
         <app-vino-item 
             *ngFor="let vino of listaVinos"
-            [vinoItem]="vino"
-            (vinoSelected)="onVinoSelected(vino)">
+            [vinoItem]="vino">
         </app-vino-item>
     </div>

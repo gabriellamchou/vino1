@@ -1,6 +1,5 @@
-<app-vinos-list
-    (vinoSelected)="onVinoSelected($event)">
-</app-vinos-list>
+<app-vinos-list></app-vinos-list>
 <app-vino-detail
+    *ngIf="vinoSelected"
     [vinoDetail]="vinoSelected">
 </app-vino-detail>

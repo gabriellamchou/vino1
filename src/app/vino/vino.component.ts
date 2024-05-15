@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VinoService } from '../services/vino.service';
 import { Vino } from '../models/vino.model';
 
 @Component({
@@ -7,15 +8,18 @@ import { Vino } from '../models/vino.model';
   styleUrls: ['./vino.component.css']
 })
 export class VinoComponent implements OnInit {
+  constructor(
+    private vinoService: VinoService
+  ) { }
+
   vinoSelected!: Vino;
 
-  constructor() { }
-
   ngOnInit(): void {
-  }
-
-  onVinoSelected(vino: Vino) {
-    this.vinoSelected = vino;
+    this.vinoService.vinoSelected.subscribe(
+      (vino: Vino) => {
+        this.vinoSelected = vino;
+      }
+    )
   }
 
 }
