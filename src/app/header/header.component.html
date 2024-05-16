@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Vinoteca</a>
+        <a class="navbar-brand">Vinoteca</a>
         <button 
             class="navbar-toggler" 
             type="button" 
@@ -16,18 +16,22 @@
                 <li class="nav-item">
                     <a 
                         class="nav-link"
-                        (click)="navToVinos()">
+                        routerLink="/vinos">
                         Vinos
                     </a>
                 </li>
                 <li class="nav-item">
                     <a 
                         class="nav-link" 
-                        (click)="navToUvas()">
+                        routerLink="/uvas">
                         Uvas
                     </a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#">Regiones</a></li>
+                <li class="nav-item">
+                    <a class="nav-link">
+                        Regiones
+                    </a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" 
                         id="navbarDropdown"
