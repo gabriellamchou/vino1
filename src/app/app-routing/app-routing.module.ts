@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { VinosListComponent } from '../vino/vinos-list/vinos-list.component';
 import { UvaComponent } from '../uva/uva.component';
+import { VinoComponent } from '../vino/vino.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/vinos', pathMatch: 'full' },
-  { path: 'vinos', component: VinosListComponent },
+  { path: 'vinos', component: VinoComponent },
   { path: 'uvas', component: UvaComponent }
 ]
 
