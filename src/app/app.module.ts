@@ -10,6 +10,7 @@ import { UvaListComponent } from './uva/uva-list/uva-list.component';
 import { UvaEditComponent } from './uva/uva-edit/uva-edit.component';
 import { VinoComponent } from './vino/vino.component';
 import { UvaComponent } from './uva/uva.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UvaComponent } from './uva/uva.component';
     UvaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
